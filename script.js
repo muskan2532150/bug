@@ -1,21 +1,21 @@
 const navright = document.querySelector('.navright');
 const burger = document.querySelector('.burger');
-const closeBtn = document.querySelector('.close-btn');
-const navLink = document.querySelectorAll('.nav-link');
+
+const navlink = document.querySelectorAll('.nav-link');
 
 burger.onclick = function () {
   navright.classList.toggle('click');
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflowX = 'hidden';
 };
 
 closeBtn.onclick = function () {
-  navright.classList.remove('click');
-  document.body.style.overflow = 'visible';
+  navright.classList.add('click');
+  document.body.style.overflow = 'visble';
 };
-
+const closeBtn = document.querySelector('.close-btn');
 navLink.forEach((link) => {
   link.onclick = function () {
-    navright.classList.remove('click');
+    navright.classList.add('click');
     document.body.style.overflow = 'visible';
   };
 });
